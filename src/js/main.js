@@ -21,7 +21,16 @@ $(document).ready(function(){
     button.on('click',function(){
         modal.addClass('modal_active');
     });
+
     close.on('click', function(){
         modal.removeClass('modal_active');
+    });
+
+    $(document).on(
+        'keydown',
+        function(event) {
+          if(event.key == "Escape") {
+            modal.removeClass('modal_active');
+        };
     });
 });
